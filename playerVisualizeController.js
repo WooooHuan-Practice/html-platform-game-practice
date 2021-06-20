@@ -31,3 +31,11 @@ function updatePlayerVisualize() {
 
   update();
 }
+
+function preloadImages() {
+  moveImgs.forEach(e => player.style.backgroundImage = e);
+  player.style.backgroundImage = jumpImg;
+  player.style.backgroundImage = idleImg;
+}
+
+preloadImages();
