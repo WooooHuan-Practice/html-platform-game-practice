@@ -4,3 +4,26 @@
   border: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: rgb(12, 24, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+#gameview {
+  width: 640px;
+  height: 480px;
+  background-image: url("images/background.png");
+  overflow: hidden;
+}
+
+#player {
+  transform: translate(304px, 384px);
+  width: 32px;
+  height: 32px;
+  background-image: url("images/idle.png");
+}
