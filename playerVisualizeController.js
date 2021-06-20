@@ -33,9 +33,28 @@ function updatePlayerVisualize() {
 }
 
 function preloadImages() {
-  moveImgs.forEach(e => player.style.backgroundImage = e);
-  player.style.backgroundImage = jumpImg;
-  player.style.backgroundImage = idleImg;
+  
+  if(preloadCounter > 4) return;
+
+  switch (preloadCounter) {
+    case 0:
+      player.style.backgroundImage = moveImgs[0];
+      return;
+    case 1:
+      player.style.backgroundImage = moveImgs[1];
+      return;
+    case 2:
+      player.style.backgroundImage = moveImgs[2];
+      return;
+    case 3:
+      player.style.backgroundImage = jumpImg;
+      return;
+    case 4:
+      player.style.backgroundImage = idleImg;
+      return;
+  }
+  preloadCounter += 1;
 }
 
+let preloadCounter = 0;
 preloadImages();
