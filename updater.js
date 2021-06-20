@@ -4,5 +4,4 @@ setInterval(() => {
   updateMovement();
   updatePlayerVisualize();
   resetKeyDown();
-  preloadImages();
 }, 0);
