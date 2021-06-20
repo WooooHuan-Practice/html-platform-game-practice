@@ -1,12 +1,12 @@
-function updatePlayerVisualize() {
+let idleImg = 'url("images/idle.png")';
+let moveImgs = [
+  'url("images/move_1.png")',
+  'url("images/move_2.png")',
+  'url("images/move_3.png")'
+]
+let jumpImg = 'url("images/jump.png")';
 
-  let idleImg = 'url("images/idle.png")';
-  let moveImgs = [
-    'url("images/move_1.png")',
-    'url("images/move_2.png")',
-    'url("images/move_3.png")'
-  ]
-  let jumpImg = 'url("images/jump.png")';
+function updatePlayerVisualize() {
 
   function update() {
     player.style.backgroundImage = getSprite();
