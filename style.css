@@ -25,5 +25,34 @@ body {
   transform: translate(304px, 384px);
   width: 32px;
   height: 32px;
+}
+
+#player-idle {
+  width: 32px;
+  height: 32px;
   background-image: url("images/idle.png");
+}
+
+#player-move-1 {
+  width: 32px;
+  height: 32px;
+  background-image: url("images/move_1.png");
+}
+
+#player-move-2 {
+  width: 32px;
+  height: 32px;
+  background-image: url("images/move_2.png");
+}
+
+#player-move-3 {
+  width: 32px;
+  height: 32px;
+  background-image: url("images/move_3.png");
+}
+
+#player-jump {
+  width: 32px;
+  height: 32px;
+  background-image: url("images/jump.png");
 }

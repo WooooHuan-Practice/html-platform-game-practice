@@ -9,18 +9,27 @@ let jumpImg = 'url("images/jump.png")';
 function updatePlayerVisualize() {
 
   function update() {
-    player.style.backgroundImage = getSprite();
+    hiddenSprites();
+    showSprite();
     updatePlayerTransform();
   }
 
-  function getSprite() {
-    if (!grounded) return jumpImg;
+  function showSprite() {
+    if (!grounded) {
+      sprites[4].style.display = 'block';
+      return;
+    }
     if (Math.abs(velocity.x) < 0.1) {
-      return idleImg;
+      sprites[0].style.display = 'block';
+      return;
     } else {
       let index = Math.abs(Math.round(playerPos.x * 0.1) % 3);
-      return moveImgs[index];
+      sprites[index + 1].style.display = 'block';
     }
+  }
+
+  function hiddenSprites() {
+    sprites.map(e => e.style.display = 'none');
   }
 
   function updatePlayerTransform() {
